@@ -35,6 +35,8 @@
     </div>
 </div>
 <script>
+    <input class="form-check-input status-{{ $lamp->id }}" onclick="updateLamp(this)" type="checkbox" role="switch" id="{{ $lamp->id }}" {{ $lamp}}>
+
     function updateLamp(payload) {
 
         //define token
