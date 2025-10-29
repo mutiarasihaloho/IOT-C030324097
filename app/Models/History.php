@@ -10,8 +10,7 @@ class History extends Model
     use Hasfactory;
     protected $fillable = ['lamp_id', 'status'];
 
-    public function lamp()
-    {
-        return $this->belongsTo(lamp::class);
+    public function lamp(){
+        return $this->belongsTo(Lamp::class);
     }
 }

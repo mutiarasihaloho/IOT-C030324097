@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('histories', function (Blueprint $table) {
+        Schema::create('lamps', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('lamp_id')->references('id')->on('lamps')->cascadeOnDelete();
-            $table->enum('status', ['ON', 'OFF']);
+            $table->string('name');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

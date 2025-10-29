@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('histories', function (Blueprint $table) {
             $table->id();
             $table->foreignId('lamp_id')->references('id')->on('lamps')->cascadeOnDelete();
-            $table->enum('status', ['ON', 'OFF]);
+            $table->enum('status', ['ON', 'OFF']);
             $table->timestamps();
         });
     }

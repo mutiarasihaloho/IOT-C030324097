@@ -8,16 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Lamp extends Model
 {
     use HasFactory;
+    protected $fillable = ['name','status'];
 
-    /**
-     * fillable
-    *
-    * @var array
-    */
-    protected $fillable = ['name', 'status'];
-
-    public function histories();
-    {
+    public function histories(){
         return $this->hasMany(History::class);
     }
 }
