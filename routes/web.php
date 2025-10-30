@@ -6,4 +6,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\LampController::class, 'index'])->name('lamps.index');
 
 //update lamps
-Route::post('/lamps/{id}', [App\Http\Controller::class, 'updateLamp'])->name('lamps.update');
+Route::post('/lamps/{id}', [App\Http\Controllers\LampController::class, 'updateLamp'])->name('lamps.update');
